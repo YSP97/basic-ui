@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+/*  */
+:root {
+  --container-size: 940px;
+}
+
+.header,
+.visual,
+.main,
+.slogan,
+.footer-inner {
+  width: var(--container-size, 940px);
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+/* 헤더 */
+.header {
+  background-color: yellow;
+  height: 10vh;
+}
+/* 비주얼 */
+.visual {
+  background-color: pink;
+  height: 10vh;
+}
+/* 메인 콘텐츠 */
+/* flex container -> direction 기본적으로 row */
+.main {
+  background-color: skyblue;
+  height: 60vh;
+  /* display박스의 성격 설정):  none;-> 블록 생성 X*/
+  /* flex-flow: direction과 wrap(줄바꿈) 속성  두 개가 동시에 */
+  display: flex;
+  flex-flow: row nowrap;
+  /* justify-content: 메인축 정렬 담당 */
+  justify-content: flex-start;
+  /* align-items: 교차축 정렬 담당 */
+  align-items: stretch;
+}
+
+.group {
+  border: 1px solid red;
+}
+/* 슬로건 */
+.slogan {
+  background-color: lime;
+  height: 10vh;
+}
+/* 푸터 */
+.footer {
+  background-color: orange;
+}
+
+.footer-inner {
+  background-color: yellow;
+  height: 10vh;
+}

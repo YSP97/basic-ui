@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>메인 페이지</title>
-</head>
-<body>
-  <h1>five-server 설치 및 사용</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>메인 페이지</title>
+    <!-- stylesheet 이렇게 많이 쓰는 건 좋지 않음 -->
+    <link rel="stylesheet" href="./style/nomarlize.css" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/main.css" />
+  </head>
+  <body>
+    <header class="header">헤더</header>
+    <div class="visual">비주얼</div>
+    <main class="main">
+      <!-- class 이름을 두 개 설정하여 한 번에 부를 수 있는 이름(group)도 만들어줌 -->
+      <div class="group1 group">그룹1</div>
+      <div class="group2 group">그룹2</div>
+      <div class="group3 group">그룹3</div>
+    </main>
+    <article class="slogan">슬로건</article>
+    <footer class="footer">
+      <div class="footer-inner">푸터</div>
+    </footer>
+  </body>
 </html>
