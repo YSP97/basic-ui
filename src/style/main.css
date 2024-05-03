@@ -14,6 +14,16 @@
   margin: 0 auto;
 }
 
+/* 버튼스타일 */
+button,
+a {
+  display: inline-block;
+  width: 100px;
+  padding: 20px;
+  border: 1px solid currentColor;
+  border-radius: 10px;
+}
+
 body {
   font-family: 'Noto Sans KR', sans-serif;
 }
@@ -22,6 +32,8 @@ body {
 .header {
   background-color: yellow;
   height: 10vh;
+  padding: 0 50px;
+  /*padding: 위 아래 좌 우  */
 }
 /* 비주얼 */
 .visual {
@@ -32,24 +44,46 @@ body {
 /* flex container -> direction 기본적으로 row */
 .main {
   background-color: skyblue;
-  height: 60vh;
+  display: flow-root; /* 부모에 뭐더라...영상 다시보기*/
+  min-height: 450px;
+  padding: 28px 16px 36px;
   /* display박스의 성격 설정):  none;-> 블록 생성 X*/
   /* flex-flow: direction과 wrap(줄바꿈) 속성  두 개가 동시에 */
-  display: flex;
-  flex-flow: row nowrap;
-  /* justify-content: 메인축 정렬 담당 */
-  justify-content: flex-start;
-  /* align-items: 교차축 정렬 담당 */
-  align-items: stretch;
+  /* justify-content: center; */
 }
 
 .group {
   border: 1px solid red;
+  /* 부모(main)를 잃은 자식(float해서)은 auto가 적용되지 않는다*/
+  margin: 0 15px;
+  float: left;
 }
+
+.group:nth-child(n + 2) {
+  margin-left: 44px;
+}
+
+/* CSS의 인덱스 번호는 0이 아니라 1로 시작함 */
+.group1 {
+  background-color: orange;
+  width: 250px;
+}
+
+.group2 {
+  background: silver;
+  width: 380px;
+}
+
+.group3 {
+  background-color: hotpink;
+  width: 190px;
+}
+
 /* 슬로건 */
 .slogan {
   background-color: lime;
   height: 10vh;
+  clear: both; /* float의 영향을 받지 않도록 함*/
 }
 /* 푸터 */
 .footer {
@@ -59,4 +93,14 @@ body {
 .footer-inner {
   background-color: yellow;
   height: 10vh;
+}
+
+/* flex를 지우너하는 웹브라우저를 위한 스타일 */
+@supports (display: flex;) {
+  .main {
+    padding: 28px 16px 36px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
